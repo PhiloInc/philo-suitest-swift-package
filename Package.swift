@@ -22,8 +22,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Suitest",
-            url: "https://file.suite.st/tvos/xcframework/1.6.2/Suitest.xcframework.zip"),
-            // TODO need checksum?
-            // checksum: "TODO"),
+            url: "https://file.suite.st/tvos/xcframework/1.6.2/Suitest.xcframework.zip",
+            // compute using "swift package compute-checksum local-zipfile-path"
+            checksum: "18b85826447bb6b60b82e190e4f6c7da7f9f0f2ffe49de6ed719045ec18c0574"),
     ]
 )
