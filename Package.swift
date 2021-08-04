@@ -1,3 +1,6 @@
+// swift-tools-version:5.3
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
 // Philo manually converted this from https://github.com/CocoaPods/Specs/blob/5aae40c89627e2e765742871cd958da1286c898c/Specs/2/1/d/Suitest/1.6.2/Suitest.podspec.json
 
 import PackageDescription
