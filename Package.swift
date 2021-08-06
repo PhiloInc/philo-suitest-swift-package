@@ -28,7 +28,7 @@ let package = Package(
         //)
         .binaryTarget(
             name: "Suitest_iOS",
-            path: "Frameworks/Suitest_iOS.xcframework",
+            path: "Frameworks/Suitest_iOS.xcframework"
         ),
     ]
 )
