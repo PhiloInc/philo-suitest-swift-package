@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "Suitest",
-            targets: ["Suitest"]),
+            targets: ["Suitest_iOS"]),
     ],
     dependencies: [
         .package(url: "https://github.com/daltoniam/Starscream.git", from: "3.0.6"),
@@ -20,15 +20,17 @@ let package = Package(
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.4.0"),
     ],
     targets: [
-        .binaryTarget(
-            name: "Suitest",
-            url: "https://file.suite.st/tvos/xcframework/1.6.2/Suitest.xcframework.zip",
-            // compute using "swift package compute-checksum local-zipfile-path"
-            checksum: "18b85826447bb6b60b82e190e4f6c7da7f9f0f2ffe49de6ed719045ec18c0574"),
-        .binaryTarget(
+        .target(
             name: "Suitest_iOS",
+            dependencies: ["SuitestBinary"],
+            exclude: ["Suitest.xcframework/"],
+            // TODO add condition, and another target for tvOS?
+        )
+        .binaryTarget(
+            name: "SuitestBinary",
             url: "https://file.suite.st/tvos/xcframework/1.6.2/Suitest.xcframework.zip",
             // compute using "swift package compute-checksum local-zipfile-path"
-            checksum: "18b85826447bb6b60b82e190e4f6c7da7f9f0f2ffe49de6ed719045ec18c0574"),
+            checksum: "18b85826447bb6b60b82e190e4f6c7da7f9f0f2ffe49de6ed719045ec18c0574"
+        ),
     ]
 )
